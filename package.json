@@ -9,6 +9,7 @@
     "@aws-sdk/client-s3": "3.787.0",
     "@remotion/bundler": "4.0.333",
     "@remotion/cli": "4.0.333",
+    "@remotion/google-fonts": "^4.0.333",
     "@remotion/renderer": "4.0.333",
     "@remotion/zod-types": "4.0.333",
     "@types/express": "4.17.13",
