@@ -1,13 +1,13 @@
 import { Still } from "remotion";
 import "./index.css";
-import { Specifications } from "./Specifications";
+import { LightModuleSpecs } from "./LightModuleSpecs";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Still
-        id="Specifications"
-        component={Specifications}
+        id="LightModuleSpecs"
+        component={LightModuleSpecs}
         width={1383}
         height={900}
       />

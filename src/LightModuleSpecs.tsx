@@ -11,7 +11,7 @@ const SPECS: [string, string][] = [
   ["Mounting Options", "Smart clip mounting system"],
 ];
 
-export const Specifications = () => {
+export const LightModuleSpecs = () => {
   return (
     <AbsoluteFill
       className="bg-transparent text-white items-center gap-[60px]"
