@@ -9,7 +9,7 @@ export const RemotionRoot: React.FC = () => {
         id="Specifications"
         component={Specifications}
         width={1383}
-        height={1920}
+        height={900}
       />
     </>
   );
