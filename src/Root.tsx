@@ -1,4 +1,5 @@
 import { Still } from "remotion";
+import "./index.css";
 import { PreviewCard } from "./PreviewCard";
 import { myCompSchema } from "./PreviewCard";
 

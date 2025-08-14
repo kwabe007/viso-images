@@ -16,13 +16,17 @@ import { helpText } from "./help-text";
 import { getImageType, getMimeType } from "./image-types";
 import { getImageHash } from "./make-hash";
 import { sendFile } from "./send-file";
+import { enableTailwind } from "@remotion/tailwind-v4";
 
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 8000;
 
-const webpackBundling = bundle(path.join(process.cwd(), "src/index.ts"));
+const webpackBundling = bundle({
+  entryPoint: path.join(process.cwd(), "src/index.ts"),
+  webpackOverride: enableTailwind,
+});
 const tmpDir = fs.promises.mkdtemp(path.join(os.tmpdir(), "remotion-"));
 
 enum Params {
