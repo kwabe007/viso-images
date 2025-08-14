@@ -1,22 +1,15 @@
 import { Still } from "remotion";
 import "./index.css";
-import { PreviewCard } from "./PreviewCard";
-import { myCompSchema } from "./PreviewCard";
+import { Specifications } from "./Specifications";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Still
-        id="PreviewCard"
-        component={PreviewCard}
-        width={1200}
-        height={627}
-        schema={myCompSchema}
-        defaultProps={{
-          title: "Welcome to Remotion" as const,
-          description: "Edit Video.tsx to change template" as const,
-          color: "#0B84F3" as const,
-        }}
+        id="Specifications"
+        component={Specifications}
+        width={1383}
+        height={1920}
       />
     </>
   );
