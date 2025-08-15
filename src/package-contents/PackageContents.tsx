@@ -31,7 +31,6 @@ export const PackageContents: FC<SpecComp> = ({ transparentBg }) => {
       )}
       style={{ fontFamily }}
     >
-      <div className="w-[800px] h-[6px] bg-main-blue" />
       <h1 className="text-8xl font-bold">What's in the box</h1>
       <div className="self-stretch flex flex-col text-7xl gap-40">
         {CONTENTS.map((item) => (
