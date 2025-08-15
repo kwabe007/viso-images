@@ -1,6 +1,9 @@
 import { AbsoluteFill, Img, staticFile } from "remotion";
 import { loadFont } from "@remotion/google-fonts/Inter";
 import { SpecTable } from "./SpecTable";
+import { FC } from "react";
+import { SpecComp } from "./spec-schema";
+import clsx from "clsx";
 
 const { fontFamily } = loadFont();
 
@@ -11,10 +14,13 @@ const SPECS: [string, string][] = [
   ["Modules Connected", "10+ light modules"],
 ];
 
-export const MainModuleSpecs = () => {
+export const MainModuleSpecs: FC<SpecComp> = ({ transparentBg }) => {
   return (
     <AbsoluteFill
-      className="bg-transparent text-white items-center gap-[80px]"
+      className={clsx(
+        transparentBg ? "bg-transparent" : "bg-background",
+        "text-white items-center gap-[80px]",
+      )}
       style={{ fontFamily }}
     >
       <div className="w-[800px] h-[6px] bg-main-yellow" />

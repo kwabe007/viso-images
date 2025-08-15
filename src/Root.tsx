@@ -3,6 +3,7 @@ import "./index.css";
 import { LightModuleSpecs } from "./specs/LightModuleSpecs";
 import { MainModuleSpecs } from "./specs/MainModuleSpecs";
 import { MeetTheTeam } from "./meet-the-team/MeetTheTeam";
+import { specCompSchema } from "./specs/spec-schema";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -12,12 +13,16 @@ export const RemotionRoot: React.FC = () => {
         component={LightModuleSpecs}
         width={1383}
         height={1360}
+        schema={specCompSchema}
+        defaultProps={{ transparentBg: false }}
       />
       <Still
         id="MainModuleSpecs"
         component={MainModuleSpecs}
         width={1383}
         height={1360}
+        schema={specCompSchema}
+        defaultProps={{ transparentBg: false }}
       />
       {/* height for no padding: 2500
           height for padding: 2720 */}
