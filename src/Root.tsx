@@ -1,7 +1,7 @@
 import { Still } from "remotion";
 import "./index.css";
-import { LightModuleSpecs } from "./LightModuleSpecs";
-import { MainModuleSpecs } from "./MainModuleSpecs";
+import { LightModuleSpecs } from "./specs/LightModuleSpecs";
+import { MainModuleSpecs } from "./specs/MainModuleSpecs";
 import { MeetTheTeam } from "./meet-the-team/MeetTheTeam";
 
 export const RemotionRoot: React.FC = () => {
