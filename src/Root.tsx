@@ -1,27 +1,27 @@
 import { Still } from "remotion";
 import "./index.css";
-import { LightModuleSpecs } from "./specs/LightModuleSpecs";
-import { MainModuleSpecs } from "./specs/MainModuleSpecs";
 import { MeetTheTeam } from "./meet-the-team/MeetTheTeam";
 import { specCompSchema } from "./specs/spec-schema";
 import { PackageContents } from "./package-contents/PackageContents";
+import { MainHubSpecifications } from "./specs-2/MainHubSpecifications";
+import { LightModuleSpecifications } from "./specs-2/LightModuleSpecifications";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Still
-        id="LightModuleSpecs"
-        component={LightModuleSpecs}
-        width={1383}
-        height={1360}
+        id="MainHubSpecifications"
+        component={MainHubSpecifications}
+        width={1920}
+        height={1660}
         schema={specCompSchema}
-        defaultProps={{ transparentBg: false }}
+        defaultProps={{ transparentBg: true }}
       />
       <Still
-        id="MainModuleSpecs"
-        component={MainModuleSpecs}
-        width={1383}
-        height={1360}
+        id="LightModuleSpecifications"
+        component={LightModuleSpecifications}
+        width={1920}
+        height={1660}
         schema={specCompSchema}
         defaultProps={{ transparentBg: false }}
       />
@@ -29,9 +29,9 @@ export const RemotionRoot: React.FC = () => {
         id="PackageContents"
         component={PackageContents}
         width={1920}
-        height={2350}
+        height={2500}
         schema={specCompSchema}
-        defaultProps={{ transparentBg: true }}
+        defaultProps={{ transparentBg: false }}
       />
       {/* height for no padding: 2500
           height for padding: 2720 */}

@@ -27,7 +27,7 @@ export const MainModuleSpecs: FC<SpecComp> = ({ transparentBg }) => {
       <h1 className="text-8xl font-bold">HUB specifications</h1>
       <Img
         className="h-[500px] rounded-[40px]"
-        src={staticFile("main_module.webp")}
+        src={staticFile("main_hub_dimensions.webp")}
       />
       <SpecTable specs={SPECS} />
     </AbsoluteFill>
