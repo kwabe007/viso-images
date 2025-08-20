@@ -38,8 +38,8 @@ export const RemotionRoot: React.FC = () => {
       <Still
         id="MeetTheTeam"
         component={MeetTheTeam}
-        width={1080}
-        height={2500}
+        width={1920}
+        height={5100}
         schema={specCompSchema}
         defaultProps={{ transparentBg: false }}
       />

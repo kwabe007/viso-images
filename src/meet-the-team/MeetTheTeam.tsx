@@ -1,10 +1,9 @@
-import { AbsoluteFill, Img } from "remotion";
-import { loadFont } from "@remotion/google-fonts/Inter";
+import { Img } from "remotion";
 import clsx from "clsx";
-import { Fragment } from "react";
+import { FC, Fragment } from "react";
 import { ProfileCard } from "./ProfileCard";
-
-const { fontFamily } = loadFont();
+import { SpecComp } from "../specs/spec-schema";
+import { AbsoluteFillTemplate } from "../components/AbsoluteFillTemplate";
 
 const BORDER_CLASSES = [
   "border-main-pink",
@@ -67,14 +66,14 @@ const SUPPORTING_ROLES = [
 
 // Add py-28 to AbsoluteFill for padding
 
-export const MeetTheTeam = () => {
+export const MeetTheTeam: FC<SpecComp> = ({ transparentBg }) => {
   return (
-    <AbsoluteFill
-      className="bg-transparent text-white gap-20"
-      style={{ fontFamily }}
+    <AbsoluteFillTemplate
+      className="gap-40 text-[5rem]"
+      transparentBg={transparentBg}
     >
-      <h1 className="text-center text-6xl font-bold">Meet the ViSo Team</h1>
-      <div className="grid grid-cols-2 gap-y-20 px-20">
+      <h1 className="text-center text-9xl font-bold">Meet the ViSo Team</h1>
+      <div className="grid grid-cols-2 gap-y-40 px-20">
         {TEAM_MEMBERS.map((profile, index) => {
           const isLast = index === TEAM_MEMBERS.length - 1;
           const unevenProfileCount = TEAM_MEMBERS.length % 2 === 1;
@@ -92,10 +91,10 @@ export const MeetTheTeam = () => {
         })}
       </div>
       <div>
-        <h1 className="text-center text-5xl font-bold my-20">
+        <h1 className="text-center font-bold my-20">
           With additional support from
         </h1>
-        <div className="grid grid-cols-2 text-3xl font-medium gap-x-12 gap-y-4 uppercase">
+        <div className="grid grid-cols-2 font-medium gap-x-12 gap-y-4 uppercase">
           {SUPPORTING_ROLES.map((role) => {
             const people =
               typeof role.people === "string" ? [role.people] : role.people;
@@ -121,6 +120,6 @@ export const MeetTheTeam = () => {
         className="block w-[400px] mx-auto mt-20"
         src="https://enbrasak.com/media/Logo-Gradient-Large.webp"
       />
-    </AbsoluteFill>
+    </AbsoluteFillTemplate>
   );
 };
