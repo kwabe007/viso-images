@@ -29,7 +29,7 @@ export const RemotionRoot: React.FC = () => {
         id="PackageContents"
         component={PackageContents}
         width={1920}
-        height={2500}
+        height={2640}
         schema={specCompSchema}
         defaultProps={{ transparentBg: false }}
       />

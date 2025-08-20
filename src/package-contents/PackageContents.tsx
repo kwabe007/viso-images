@@ -49,7 +49,10 @@ export const PackageContents: FC<SpecComp> = ({ transparentBg }) => {
       style={{ fontFamily }}
     >
       <Divider className="w-[1200px] h-[32px] shrink-0" color="blue" />
-      <h1 className="text-8xl font-bold">What's in the box</h1>
+      <h1 className="text-9xl font-bold text-center space-y-6">
+        <div>What's in the box</div>
+        <div className="text-8xl">Standard Kit</div>
+      </h1>
       <div className="self-stretch flex flex-col text-7xl gap-40">
         {CONTENTS.map((item) => (
           <div className="self-stretch h-[300px] flex items-center gap-30 border-6 bg-white/10 border-white/20 rounded-full">
