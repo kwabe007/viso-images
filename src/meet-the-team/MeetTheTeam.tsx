@@ -15,7 +15,7 @@ const TEAM_MEMBERS = [
   {
     name: "Junior Asante",
     title: "Founder",
-    imageUrl: "https://enbrasak.com/media/junior-cropped_1.1.jpg",
+    imageUrl: "https://enbrasak.com/media/20220121_143710.jpg",
   },
   {
     name: "Kwabena Asante",
@@ -90,8 +90,8 @@ export const MeetTheTeam: FC<SpecComp> = ({ transparentBg }) => {
           );
         })}
       </div>
-      <div>
-        <h1 className="text-center font-bold my-20">
+      <div className="text-[3.2rem]">
+        <h1 className="text-center text-[4rem] text-white/90 font-semibold my-20">
           With additional support from
         </h1>
         <div className="grid grid-cols-2 font-medium gap-x-12 gap-y-4 uppercase">
@@ -103,13 +103,13 @@ export const MeetTheTeam: FC<SpecComp> = ({ transparentBg }) => {
               return (
                 <Fragment key={person}>
                   {showRole ? (
-                    <span className="text-right text-white/70 text-">
+                    <span className="text-right text-white/60">
                       {role.role}
                     </span>
                   ) : (
                     <span></span>
                   )}
-                  <span>{person}</span>
+                  <span className="text-white/80">{person}</span>
                 </Fragment>
               );
             });
