@@ -27,7 +27,7 @@ export const MainHubSpecifications = ({ transparentBg }: SpecComp) => {
     >
       <SpecificationTemplate
         title="Main Hub"
-        imageUrl={staticFile("main_hub_transparent_1.png")}
+        imageUrl={staticFile("main_hub_diagonal_transparent.png")}
         specs={HUB_SPECS}
         imageClassName="relative left-20"
       />

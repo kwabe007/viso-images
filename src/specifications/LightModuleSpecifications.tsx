@@ -24,7 +24,7 @@ export const LightModuleSpecifications = ({ transparentBg }: SpecComp) => {
     >
       <SpecificationTemplate
         title="Light Module"
-        imageUrl={staticFile("light_module_transparent_diagonal.png")}
+        imageUrl={staticFile("light_module_diagonal_transparent.png")}
         specs={SPECS}
       />
     </AbsoluteFillTemplate>
