@@ -2,8 +2,8 @@ import { Img } from "remotion";
 import clsx from "clsx";
 import { FC, Fragment } from "react";
 import { ProfileCard } from "./ProfileCard";
-import { SpecComp } from "../specs/spec-schema";
 import { AbsoluteFillTemplate } from "../components/AbsoluteFillTemplate";
+import { SpecComp } from "../utils";
 
 const BORDER_CLASSES = [
   "border-main-pink",

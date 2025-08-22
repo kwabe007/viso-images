@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import { AbsoluteFillTemplate } from "../components/AbsoluteFillTemplate";
-import { SpecComp } from "../specs/spec-schema";
 import { SpecificationTemplate } from "./SpecificationTemplate";
 import { staticFile } from "remotion";
+import { SpecComp } from "../utils";
 
 const SPECS: [string, string][] = [
   ["Dimensions", "86 x 35 x 125 mm (3.4 x 1.4 x 5 in)"],
@@ -20,6 +20,7 @@ export const LightModuleSpecifications = ({ transparentBg }: SpecComp) => {
         transparentBg ? "bg-transparent" : "bg-background",
         "text-white text-6xl items-center gap-[40px]",
       )}
+      transparentBg={transparentBg}
     >
       <SpecificationTemplate
         title="Light Module"

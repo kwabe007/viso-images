@@ -2,8 +2,8 @@ import { AbsoluteFill, Img, staticFile } from "remotion";
 import { loadFont } from "@remotion/google-fonts/Inter";
 import clsx from "clsx";
 import { FC } from "react";
-import { SpecComp } from "../specs/spec-schema";
 import { Divider } from "../components/Divider";
+import { SpecComp } from "../utils";
 
 const { fontFamily } = loadFont();
 

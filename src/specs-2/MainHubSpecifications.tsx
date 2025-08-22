@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import { AbsoluteFillTemplate } from "../components/AbsoluteFillTemplate";
-import { SpecComp } from "../specs/spec-schema";
 import { SpecificationTemplate } from "./SpecificationTemplate";
 import { staticFile } from "remotion";
+import { SpecComp } from "../utils";
 
 const HUB_SPECS: [string, string][] = [
   ["Dimensions", "126 x 126 x 40 mm (5 x 5 x 1.6 in)"],
@@ -23,6 +23,7 @@ export const MainHubSpecifications = ({ transparentBg }: SpecComp) => {
         transparentBg ? "bg-transparent" : "bg-background",
         "text-white text-6xl items-center gap-[40px]",
       )}
+      transparentBg={transparentBg}
     >
       <SpecificationTemplate
         title="Main Hub"

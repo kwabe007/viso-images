@@ -2,8 +2,8 @@ import { AbsoluteFill, Img, staticFile } from "remotion";
 import { loadFont } from "@remotion/google-fonts/Inter";
 import { SpecTable } from "./SpecTable";
 import { FC } from "react";
-import { SpecComp } from "./spec-schema";
 import clsx from "clsx";
+import { SpecComp } from "../utils";
 
 const { fontFamily } = loadFont();
 
