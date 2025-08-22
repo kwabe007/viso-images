@@ -11,13 +11,13 @@ const CONTENTS = [
   {
     quantity: 1,
     name: "Main Hub Unit",
-    imageUrl: staticFile("main_hub_transparent_3.png"),
-    imageClassName: "-translate-x-[15%] scale-125",
+    imageUrl: staticFile("main_hub_front_transparent.png"),
+    imageClassName: "scale-90",
   },
   {
     quantity: 2,
     name: "Light Modules",
-    imageUrl: staticFile("light_module_transparent_front.png"),
+    imageUrl: staticFile("light_module_front_transparent.png"),
     imageClassName: "scale-85",
   },
   {
