@@ -2,8 +2,8 @@ import { Still } from "remotion";
 import "./index.css";
 import { MeetTheTeam } from "./meet-the-team/MeetTheTeam";
 import { PackageContents } from "./package-contents/PackageContents";
-import { MainHubSpecifications } from "./specs-2/MainHubSpecifications";
-import { LightModuleSpecifications } from "./specs-2/LightModuleSpecifications";
+import { MainHubSpecifications } from "./specifications/MainHubSpecifications";
+import { LightModuleSpecifications } from "./specifications/LightModuleSpecifications";
 import { specCompSchema } from "./utils";
 
 export const RemotionRoot: React.FC = () => {
