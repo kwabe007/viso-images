@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { FC, Fragment } from "react";
 import { ProfileCard } from "./ProfileCard";
 import { AbsoluteFillTemplate } from "../components/AbsoluteFillTemplate";
-import { SpecComp } from "../utils";
+import { chunkArray, SpecComp } from "../utils";
 
 const BORDER_CLASSES = [
   "border-main-pink",
@@ -67,26 +67,38 @@ const SUPPORTING_ROLES = [
 // Add py-28 to AbsoluteFill for padding
 
 export const MeetTheTeam: FC<SpecComp> = ({ transparentBg }) => {
+  const teamMemberChunks = chunkArray(TEAM_MEMBERS, 3);
+
   return (
     <AbsoluteFillTemplate
       className="gap-40 text-[5rem]"
       transparentBg={transparentBg}
     >
       <h1 className="text-center text-9xl font-bold">Meet the ViSo Team</h1>
-      <div className="grid grid-cols-2 gap-y-40 px-20">
-        {TEAM_MEMBERS.map((profile, index) => {
-          const isLast = index === TEAM_MEMBERS.length - 1;
-          const unevenProfileCount = TEAM_MEMBERS.length % 2 === 1;
 
+      <div className="space-y-40">
+        {teamMemberChunks.map((teamMemberChunk, index) => {
+          const isLastChunk = index === teamMemberChunks.length - 1;
           return (
-            <ProfileCard
-              key={profile.name}
-              className={clsx(isLast && unevenProfileCount && "col-span-2")}
-              name={profile.name}
-              title={profile.title}
-              imageUrl={profile.imageUrl}
-              imageDivClassName={BORDER_CLASSES[index % BORDER_CLASSES.length]}
-            />
+            <div
+              className={clsx(
+                "flex",
+                isLastChunk ? "justify-evenly" : "justify-between",
+              )}
+            >
+              {teamMemberChunk.map((teamMember) => (
+                <ProfileCard
+                  key={teamMember.name}
+                  className="w-[600px] shrink-0"
+                  name={teamMember.name}
+                  title={teamMember.title}
+                  imageUrl={teamMember.imageUrl}
+                  imageDivClassName={
+                    BORDER_CLASSES[index % BORDER_CLASSES.length]
+                  }
+                />
+              ))}
+            </div>
           );
         })}
       </div>

@@ -39,7 +39,7 @@ export const RemotionRoot: React.FC = () => {
         id="MeetTheTeam"
         component={MeetTheTeam}
         width={1920}
-        height={5100}
+        height={3440}
         schema={specCompSchema}
         defaultProps={{ transparentBg: false }}
       />
