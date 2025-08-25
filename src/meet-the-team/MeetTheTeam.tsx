@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { FC, Fragment } from "react";
 import { ProfileCard } from "./ProfileCard";
 import { AbsoluteFillTemplate } from "../components/AbsoluteFillTemplate";
-import { chunkArray, SpecComp } from "../utils";
+import { SpecComp } from "../utils";
 
 const BORDER_CLASSES = [
   "border-main-pink",
@@ -12,33 +12,37 @@ const BORDER_CLASSES = [
 ];
 
 const TEAM_MEMBERS = [
-  {
-    name: "Junior Asante",
-    title: "Founder",
-    imageUrl: "https://enbrasak.com/media/20220121_143710.jpg",
-  },
-  {
-    name: "Kwabena Asante",
-    title: "Co-Founder",
-    imageUrl: "https://enbrasak.com/media/1703850852410.jpg",
-  },
-  {
-    name: "Gregory Mwangi",
-    title: "Developer",
-    imageUrl:
-      "https://media.licdn.com/dms/image/v2/D4D03AQEBpOYNC6ACoQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1709362936494?e=1758153600&v=beta&t=ZtZyMI_C3xJPSrNLpn5VV-7oRsdPy6VRWPEqgc5X4Ko",
-  },
-  {
-    name: "Hampton Macharia",
-    title: "Developer",
-    imageUrl:
-      "https://media.licdn.com/dms/image/v2/C4D03AQFVQWo1iRSAIA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1549826293436?e=1758153600&v=beta&t=mSbYF0tqqOLWz239qtZc-H5t5pfPq8h9M1qtGyCeoeQ",
-  },
-  {
-    name: "Elias Norberg",
-    title: "Developer",
-    imageUrl: "https://www.aisle.se/images/elias.jpg",
-  },
+  [
+    {
+      name: "Junior Asante",
+      title: "Founder",
+      imageUrl: "https://enbrasak.com/media/20220121_143710.jpg",
+    },
+    {
+      name: "Kwabena Asante",
+      title: "Co-Founder",
+      imageUrl: "https://enbrasak.com/media/1703850852410.jpg",
+    },
+  ],
+  [
+    {
+      name: "Gregory Mwangi",
+      title: "Developer",
+      imageUrl:
+        "https://media.licdn.com/dms/image/v2/D4D03AQEBpOYNC6ACoQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1709362936494?e=1758153600&v=beta&t=ZtZyMI_C3xJPSrNLpn5VV-7oRsdPy6VRWPEqgc5X4Ko",
+    },
+    {
+      name: "Hampton Macharia",
+      title: "Developer",
+      imageUrl:
+        "https://media.licdn.com/dms/image/v2/C4D03AQFVQWo1iRSAIA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1549826293436?e=1758153600&v=beta&t=mSbYF0tqqOLWz239qtZc-H5t5pfPq8h9M1qtGyCeoeQ",
+    },
+    {
+      name: "Elias Norberg",
+      title: "Developer",
+      imageUrl: "https://www.aisle.se/images/elias.jpg",
+    },
+  ],
 ];
 
 const SUPPORTING_ROLES = [
@@ -67,8 +71,6 @@ const SUPPORTING_ROLES = [
 // Add py-28 to AbsoluteFill for padding
 
 export const MeetTheTeam: FC<SpecComp> = ({ transparentBg }) => {
-  const teamMemberChunks = chunkArray(TEAM_MEMBERS, 3);
-
   return (
     <AbsoluteFillTemplate
       className="gap-40 text-[5rem]"
@@ -77,13 +79,13 @@ export const MeetTheTeam: FC<SpecComp> = ({ transparentBg }) => {
       <h1 className="text-center text-9xl font-bold">Meet the ViSo Team</h1>
 
       <div className="space-y-40">
-        {teamMemberChunks.map((teamMemberChunk, index) => {
-          const isLastChunk = index === teamMemberChunks.length - 1;
+        {TEAM_MEMBERS.map((teamMemberChunk, index) => {
+          const lessThanThree = teamMemberChunk.length < 3;
           return (
             <div
               className={clsx(
                 "flex",
-                isLastChunk ? "justify-evenly" : "justify-between",
+                lessThanThree ? "justify-evenly" : "justify-between",
               )}
             >
               {teamMemberChunk.map((teamMember) => (
