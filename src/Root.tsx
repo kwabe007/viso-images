@@ -5,6 +5,7 @@ import { PackageContents } from "./package-contents/PackageContents";
 import { MainHubSpecifications } from "./specifications/MainHubSpecifications";
 import { LightModuleSpecifications } from "./specifications/LightModuleSpecifications";
 import { specCompSchema } from "./utils";
+import { Kit, kitSchema } from "./kits/Kit";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -42,6 +43,14 @@ export const RemotionRoot: React.FC = () => {
         height={3440}
         schema={specCompSchema}
         defaultProps={{ transparentBg: false }}
+      />
+      <Still
+        id="Kit"
+        component={Kit}
+        width={1920}
+        height={1371}
+        schema={kitSchema}
+        defaultProps={{ variant: "2" }}
       />
     </>
   );

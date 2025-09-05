@@ -7,11 +7,11 @@ const { fontFamily: fontFamily } = loadFont();
 
 interface AbsoluteFillTemplateProps
   extends ComponentProps<typeof AbsoluteFill> {
-  transparentBg: boolean;
+  transparentBg?: boolean;
 }
 
 export const AbsoluteFillTemplate = ({
-  transparentBg,
+  transparentBg = false,
   style,
   className,
   ...rest

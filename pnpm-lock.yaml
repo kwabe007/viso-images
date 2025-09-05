@@ -64,6 +64,9 @@ importers:
       remotion:
         specifier: 4.0.333
         version: 4.0.333(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      ts-pattern:
+        specifier: ^5.8.0
+        version: 5.8.0
       zod:
         specifier: 3.22.3
         version: 3.22.3
@@ -4446,6 +4449,12 @@ packages:
     peerDependencies:
       typescript: ">=4.8.4"
 
+  ts-pattern@5.8.0:
+    resolution:
+      {
+        integrity: sha512-kIjN2qmWiHnhgr5DAkAafF9fwb0T5OhMVSWrm8XEdTFnX6+wfXwYOFjeF86UZ54vduqiR7BfqScFmXSzSaH8oA==,
+      }
+
   tslib@2.8.1:
     resolution:
       {
@@ -7750,6 +7759,8 @@ snapshots:
   ts-api-utils@2.1.0(typescript@5.8.2):
     dependencies:
       typescript: 5.8.2
+
+  ts-pattern@5.8.0: {}
 
   tslib@2.8.1: {}
 

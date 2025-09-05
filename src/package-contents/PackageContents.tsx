@@ -34,7 +34,7 @@ const CONTENTS = [
   {
     quantity: 1,
     name: "User Manual",
-    imageUrl: staticFile("book_filled.svg"),
+    imageUrl: staticFile("book_filled_dark.svg"),
     imageClassName: "scale-80",
   },
 ];
