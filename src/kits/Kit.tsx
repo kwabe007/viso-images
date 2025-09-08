@@ -13,10 +13,10 @@ type KitProps = z.infer<typeof kitSchema>;
 
 export const Kit = ({ variant }: KitProps) => {
   const backgroundImageUrl = match(variant)
-    .with("1", () => staticFile("/viso_kit_1_7.5.jpg"))
-    .with("2", () => staticFile("/viso_kit_2_7.5.jpg"))
-    .with("3", () => staticFile("/viso_kit_3_7.5.jpg"))
-    .with("4", () => staticFile("/viso_kit_4_7.5.jpg"))
+    .with("1", () => staticFile("/viso_kit_1_7.5.png"))
+    .with("2", () => staticFile("/viso_kit_2_7.5.png"))
+    .with("3", () => staticFile("/viso_kit_3_7.5.png"))
+    .with("4", () => staticFile("/viso_kit_4_7.5.png"))
     .exhaustive();
 
   const lightModuleQuantity = match(variant)
