@@ -10,7 +10,8 @@ const SPECS: [string, string][] = [
   ["Runtime", "Up to 8 hours"],
   ["Charging Time", "2–4 hours"],
   ["Ports", "USB-C"],
-  ["Other features", "RGB Power LEDs (9W), Smart clip mounting system"],
+  ["Hardware", "RGB Power LEDs (9W)"],
+  ["Other features", "Smart clip mounting system"],
 ];
 
 export const LightModuleSpecifications = ({ transparentBg }: SpecComp) => {

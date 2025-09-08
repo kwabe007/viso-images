@@ -1,9 +1,6 @@
 import { Img } from "remotion";
-import { loadFont } from "@remotion/google-fonts/RobotoMono";
 import { Fragment } from "react";
 import clsx from "clsx";
-
-const { fontFamily: robotoMonoFontFamily } = loadFont();
 
 interface SpecificationTemplateProps {
   title: string;
@@ -25,10 +22,7 @@ export const SpecificationTemplate = ({
         className={clsx("h-[500px] object-contain", imageClassName)}
         src={imageUrl}
       />
-      <div
-        className="self-stretch grid grid-cols-[min-content_1fr] border-t-4 border-t-white text-[3.9rem]"
-        style={{ fontFamily: robotoMonoFontFamily }}
-      >
+      <div className="self-stretch grid grid-cols-[min-content_1fr] border-t-4 border-t-white text-[4.8rem]">
         {specs.map(([name, value]) => (
           <Fragment key={name}>
             <div className="pr-10 border-r-4 border-r-white py-10 font-bold text-nowrap">

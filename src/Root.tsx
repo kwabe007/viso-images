@@ -14,7 +14,7 @@ export const RemotionRoot: React.FC = () => {
         id="MainHubSpecifications"
         component={MainHubSpecifications}
         width={1920}
-        height={1660}
+        height={1850}
         schema={specCompSchema}
         defaultProps={{ transparentBg: true }}
       />
@@ -22,7 +22,7 @@ export const RemotionRoot: React.FC = () => {
         id="LightModuleSpecifications"
         component={LightModuleSpecifications}
         width={1920}
-        height={1660}
+        height={1850}
         schema={specCompSchema}
         defaultProps={{ transparentBg: false }}
       />

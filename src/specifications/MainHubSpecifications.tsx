@@ -9,11 +9,9 @@ const HUB_SPECS: [string, string][] = [
   ["Weight", "300 g (0.7 lb)"],
   ["Runtime", "Up to 8 hours"],
   ["Charging Time", "1–2 hours"],
-  ["Ports", "USB-C, Line in/out, SD-card"],
-  [
-    "Other features",
-    "Stereo microphones, OLED display, Up to 10 connected Light Modules",
-  ],
+  ["Ports", "USB-C, Line in/out"],
+  ["Hardware", "Stereo microphones, OLED display"],
+  ["Other features", "Up to 10 connected Light Modules"],
 ];
 
 export const MainHubSpecifications = ({ transparentBg }: SpecComp) => {
