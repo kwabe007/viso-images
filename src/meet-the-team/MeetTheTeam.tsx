@@ -1,4 +1,4 @@
-import { Img } from "remotion";
+import { Img, staticFile } from "remotion";
 import clsx from "clsx";
 import { FC, Fragment } from "react";
 import { ProfileCard } from "./ProfileCard";
@@ -28,14 +28,12 @@ const TEAM_MEMBERS = [
     {
       name: "Gregory Mwangi",
       title: "Developer",
-      imageUrl:
-        "https://media.licdn.com/dms/image/v2/D4D03AQEBpOYNC6ACoQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1709362936494?e=1758153600&v=beta&t=ZtZyMI_C3xJPSrNLpn5VV-7oRsdPy6VRWPEqgc5X4Ko",
+      imageUrl: staticFile("gregory-m.jpeg"),
     },
     {
       name: "Hampton Macharia",
       title: "Developer",
-      imageUrl:
-        "https://media.licdn.com/dms/image/v2/C4D03AQFVQWo1iRSAIA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1549826293436?e=1758153600&v=beta&t=mSbYF0tqqOLWz239qtZc-H5t5pfPq8h9M1qtGyCeoeQ",
+      imageUrl: staticFile("hampton-m.jpeg"),
     },
     {
       name: "Elias Norberg",
