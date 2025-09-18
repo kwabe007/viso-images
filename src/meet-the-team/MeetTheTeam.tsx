@@ -52,7 +52,7 @@ const SUPPORTING_ROLES = [
   },
   {
     role: "Content Creation",
-    people: "Laura Morales",
+    people: "Laura Morales Rojas",
   },
   {
     role: "Visual Design",
